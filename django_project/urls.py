@@ -22,6 +22,8 @@ urlpatterns = patterns('',
     
 )
 
+from django.conf import settings
+import os
 
 if settings.DEBUG:
     urlpatterns += patterns("",
