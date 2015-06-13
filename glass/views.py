@@ -62,7 +62,7 @@ def conf(request):
         form = SlideForm(request.POST)
         if form.is_valid():
             slide = form.save()
-            return HttpResponseRedirect('/conf')
+            return HttpResponseRedirect('/')
         else:
             form = EnlaceForm()
         
