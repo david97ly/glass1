@@ -16,7 +16,7 @@ urlpatterns = patterns('',
     url(r'^quienes', 'glass.views.quienes', name='quines'),
     url(r'^ubicacion', 'glass.views.ubicacion', name='ubicacion'),
     url(r'^login', 'glass.views.login', name='login'),
-    url(r'^conf', 'glass.views.conf', name='conf'),
+    url(r'^conf/', 'glass.views.conf', name='conf'),
 
   #  url(r'^media/(?P<path>.*)$','django.views.static.serve',{'document_root':'/home/'}),
     
