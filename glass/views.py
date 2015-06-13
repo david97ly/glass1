@@ -67,5 +67,5 @@ def conf(request):
             form = EnlaceForm()
         
         template = "cofiguraciones.html"
-        return render_to_response(template,context_instance = RequestContext(request,locals()))
+        return render(request,template,{"form":form})
     
