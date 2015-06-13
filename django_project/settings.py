@@ -24,7 +24,7 @@ DEBUG = False
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = ['http://45.55.204.55',]
+ALLOWED_HOSTS = ['127.0.0.1:9000',]
 
 
 
