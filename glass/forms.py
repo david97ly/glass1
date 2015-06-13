@@ -3,8 +3,8 @@ from django.forms import ModelForm
 from models import *
 
 
-class SlideForm(ModelForm):
-    mensaje = models.CharField(label='Mensaje Principal',max_length=500)
+class SlideForm(forms.Form):
+    mensaje = forms.CharField(label='Mensaje Principal',max_length=500)
        # exclude = ("votos","usuario")
 	   
 class MensajebForm(ModelForm):
