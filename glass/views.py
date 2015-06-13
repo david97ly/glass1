@@ -57,7 +57,15 @@ def login(request):
     
 @login_required
 def conf(request):
-    titulo = "Configuraciones"
-    c = {'titulo': titulo}
-    return render_to_response('cofiguraciones.html',c)
+    fotos = Fotos.objects.all()
+    if request.method == 'POST':
+        form = SlideForm(request.POST)
+        if form.is_valid():
+            slide = form.save()
+            return HttpResponseRedirect('/conf')
+        else:
+            form = EnlaceForm()
+        
+        template = "cofiguraciones.html"
+        return render_to_response(template,context_instance = RequestContext(request,locals()))
     
