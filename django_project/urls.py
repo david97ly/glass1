@@ -24,6 +24,8 @@ urlpatterns = patterns('',
 
 from django.conf import settings
 import os
+print "ESTA ES LA DIRECCION DEL DIRECTORIO MEDIA"
+print settings.MEDIA_ROOT
 
 if settings.DEBUG:
     urlpatterns += patterns("",
