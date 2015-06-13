@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.template.loader import get_template
 from django.template import Context
 from django.template.context import RequestContext
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse,HttpREsponseRedirect
 from forms import *
 from django.shortcuts import render_to_response,redirect
 from django.contrib.auth.decorators import login_required
@@ -61,7 +61,7 @@ def conf(request):
     if request.method == 'POST':
         form = SlideForm(request.POST)
         if form.is_valid():
-            form = SlideForm.save()
+            form.save()
             return HttpResponseRedirect('/conf')
     else:
         form = SlideForm()
