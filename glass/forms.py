@@ -3,7 +3,7 @@ from django.forms import ModelForm
 from models import *
 
 
-class SlideForm(forms.Form):
+class SlideForm(ModelForm):
     class Meta:
         model = Slide
 	   
