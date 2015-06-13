@@ -3,10 +3,8 @@ from django.template.loader import get_template
 from django.template import Context
 from django.template.context import RequestContext
 from django.http import HttpResponse,HttpResponseRedirect
-from forms import *
 from django.shortcuts import render_to_response,redirect
-from django.contrib.auth.decorators import login_required
-
+from forms import *
 def home(request):
     hola="here"
     nombrep="Esta es otra prueba"
@@ -54,6 +52,7 @@ def login(request):
     titulo = "Login"
     c = {'titulo': titulo}
     return render_to_response('login.html',c)
+    
     
 @login_required
 def conf(request):

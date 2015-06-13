@@ -4,8 +4,8 @@ from models import *
 
 
 class SlideForm(forms.Form):
-    mensaje = forms.CharField(label='Mensaje Principal',max_length=500)
-       # exclude = ("votos","usuario")
+    class Meta:
+        model = Slide
 	   
 class MensajebForm(ModelForm):
     class Meta:
