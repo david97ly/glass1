@@ -57,14 +57,13 @@ def login(request):
     
 @login_required
 def conf(request):
-    fotos = Fotos.objects.all()
     if request.method == 'POST':
         form = SlideForm(request.POST)
         if form.is_valid():
             slide = form.save()
             return redirect("/")
         else:
-            form = EnlaceForm()
+            form = SlideForm()
         
         template = "cofiguraciones.html"
         return render(request,template,{"form":form})

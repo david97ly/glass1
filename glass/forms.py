@@ -2,25 +2,12 @@ from django import forms
 from django.forms import ModelForm
 from models import *
 
+class SlideForm(forms.Form):
+    mensaje = forms.CharField(label='Mensaje Principal',max_length=100)
+    submensaje = forms.CharField(label='Mensaje Secundario',max_length=100)
+    
 
-class SlideForm(ModelForm):
-    class Meta:
-        model = Slide
+#class SlideForm(ModelForm):
+ #   class Meta:
+  #      model = Slide
        # exclude = ("votos","usuario")
-	   
-class MensajebForm(ModelForm):
-    class Meta:
-        model = Mensajeb
-		
-class InfoForm(ModelForm):
-    class Meta:
-        model = Info
-
-class ContactosForm(ModelForm):
-    class Meta:
-        model = Contactos
-		
-class ServiciosForm(ModelForm):
-    class Meta:
-        model = Servicios
-	
